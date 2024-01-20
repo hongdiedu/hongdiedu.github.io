@@ -185,6 +185,18 @@ nav .brand-logo {
     background-color: var(--secondary-color);
 }
 
+.center-image-container {
+  display: flex;
+  justify-content: space-around; /* This will space your images equally */
+  align-items: stretch; /* This will make sure that they are of equal height */
+}
+
+.center-image-container img {
+  flex: 1; /* This will allow each image to grow and take up equal width */
+  max-height: 500px; /* You can set a max-height as per your design requirements */
+  object-fit: cover; /* This will make sure that images cover the area without stretching */
+}
+
 #image-section-1 {
     /* Set image and add light gradient overlay above image */
     /*background: linear-gradient(0deg, rgb(255, 235, 59, 0.3), rgba(255, 112, 67, 0.3)), url("../images/christina-wocintechchat-com-unsplash-1.jpg");*/
