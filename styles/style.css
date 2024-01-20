@@ -185,20 +185,17 @@ nav .brand-logo {
     background-color: var(--secondary-color);
 }
 
-.center-image-container {
-  display: flex;
-  justify-content: space-between; /* This will place equal space between each image */
-  align-items: center; /* This will align items vertically */
-  gap: 10px; /* This sets the gap between each image */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* creates two columns of equal width */
+  grid-template-rows: auto auto; /* creates two rows based on content size */
+  gap: 10px; /* space between images */
 }
 
-.center-image-container img {
-  flex-grow: 1; /* Allows the image to grow to fill the container */
-  flex-shrink: 1; /* Allows the image to shrink if necessary */
-  flex-basis: 0; /* Sets the default size of an element before the remaining space is distributed */
-  height: auto; /* Maintains the aspect ratio */
-  max-height: 500px; /* Maximum height for all images */
-  object-fit: scale-down; /* Ensures the content is scaled down to fit, no clipping */
+.grid-container img {
+  width: 100%; /* forces image to fill the container */
+  height: auto; /* maintains the aspect ratio */
+  object-fit: scale-down; /* ensures the content is scaled down to fit without distortion */
 }
 
 #image-section-1 {
