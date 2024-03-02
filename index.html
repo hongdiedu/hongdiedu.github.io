@@ -18,6 +18,28 @@
 
     <!-- Include our custom stylesheets last so they override imported library styles -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+
+    <style>
+    .stripe-button {
+        display: inline-block;
+        background-color: #6772e5;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease;
+    }
+
+    .stripe-button:hover {
+        background-color: #7795f8;
+    }
+</style>
 </head>
 
 <body style="width:100%;margin:0%;padding:0%">
@@ -90,8 +112,7 @@
                 </div>
 
                 <div class="container" id="payment">
-                     <div id="payment-request-button">
-                     <!-- A Stripe Element will be inserted here. -->
+                      <button class="stripe-button" id="placeholder-stripe-button">Pay with Card</button>
                 </div>
 
                 <div class="container" id="about">
@@ -208,7 +229,15 @@
 
     <!-- Include custom script last because it depends on code in the libraries to run -->
     <script type="text/javascript" src="scripts/script.js"></script>
-    <script src="https://js.stripe.com/v3/"></script>
+
+    <script>
+        // Add event listener to the button
+        document.getElementById('placeholder-stripe-button').addEventListener('click', function() {
+            // Simulate payment process (e.g., display a success message)
+            console.log('Payment simulated successfully!');
+            // You can also redirect to a "thank you" page or perform other actions here
+        });
+    </script>
 </body>
 
 </html>
