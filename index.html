@@ -18,28 +18,23 @@
 
     <!-- Include our custom stylesheets last so they override imported library styles -->
     <link rel="stylesheet" type="text/css" href="styles/style.css">
-
     <style>
-    .stripe-button {
-        display: inline-block;
-        background-color: #6772e5;
-        color: #fff;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        font-weight: bold;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        text-decoration: none;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-        transition: background-color 0.3s ease;
-    }
-
-    .stripe-button:hover {
-        background-color: #7795f8;
-    }
-</style>
+      .payment-methods {
+        background-color: #2c3e50; /* dark blue background */
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .payment-methods img {
+        padding: 10px; /* space inside each payment method */
+        background: white; /* white background for logos */
+        border-radius: 10px; /* rounded corners */
+        margin: 0 10px; /* space between logos */
+        width: 100px; /* fixed width, adjust as needed */
+        height: auto; /* maintain aspect ratio */
+      }
+    </style>
 </head>
 
 <body style="width:100%;margin:0%;padding:0%">
@@ -109,10 +104,6 @@
                           <img src="images/harvard.jpeg" alt="Harvard">
                         </div>
                     </div>
-                </div>
-
-                <div class="container" id="payment">
-                      <button class="stripe-button" id="placeholder-stripe-button">Pay with Card</button>
                 </div>
 
                 <div class="container" id="about">
@@ -213,6 +204,16 @@
                     </ul>
                 </div>
             </div>
+            <div class="row payment-methods">
+                  <!-- Replace src attributes with the paths to your logo images -->
+                  <img src="visa-logo.png" alt="Visa">
+                  <img src="mastercard-logo.png" alt="Mastercard">
+                  <img src="paypal-logo.png" alt="PayPal">
+                  <img src="alipay-logo.png" alt="Alipay">
+                  <img src="wechat-pay-logo.png" alt="WeChat Pay">
+                  <img src="klarna-logo.png" alt="Klarna">
+                  <img src="atome-logo.png" alt="Atome">
+            </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
@@ -229,15 +230,6 @@
 
     <!-- Include custom script last because it depends on code in the libraries to run -->
     <script type="text/javascript" src="scripts/script.js"></script>
-
-    <script>
-        // Add event listener to the button
-        document.getElementById('placeholder-stripe-button').addEventListener('click', function() {
-            // Simulate payment process (e.g., display a success message)
-            console.log('Payment simulated successfully!');
-            // You can also redirect to a "thank you" page or perform other actions here
-        });
-    </script>
 </body>
 
 </html>
